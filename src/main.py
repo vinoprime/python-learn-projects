@@ -61,5 +61,53 @@ print(int("0b101", 2))
 
 
 
+a,b,c = 11,2,3
+
+# print(a)
+
+aa = 10
+bb = 2
+bb +=2
+bb -=2
+bb *=2
 
 
+
+# str
+print(type("kjdfhgfhd"))
+# log string
+l_str = """
+Hello long str
+"""
+
+print(l_str)
+
+
+# Escape sequences
+
+w = "It's sunny"
+w1 = "It \'s \"knid"
+w2 = "\tIt \'s \"knid"
+print(w1)
+print(w2)
+
+# Formated string
+name = "VVVV"
+print(f"{name}")
+
+# Expressions and statements
+
+if a ==1 :
+    print("10")
+elif a==5:
+    print("100")
+else:
+    print("else")
+
+
+
+#  Password checker
+name = input("Enter name: ")
+passwd = input("Enter pass: ")
+
+print(f"your pass is {len(passwd)}")
