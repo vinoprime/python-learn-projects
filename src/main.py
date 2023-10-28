@@ -164,3 +164,30 @@ bas = [1,2,3,4,5]
 a,b,c, *other,d = bas
 
 print(a,b,c, other,d)
+
+
+# Dictionary (unorderred key value pair)
+print(dict)
+# sytntax
+d = { "a":1, "b":2, "c":[1,2,3], "d":"Hello", 123:"xyz", True: "he"} # {key, value}
+print(d)
+print(d['b'])
+print(d['c'])
+print(d['c'][0])
+print(d[123])
+print(d[True])
+
+# Safe way to get value from dict
+print(d.get("x"))
+print(d.get("x", 55))
+
+
+val = "vvv"
+user = dict(key=val)
+print(user)
+
+
+# Tuple like list but it is immutable (Readonly list)
+tup = (1,2,3,4,5)
+print(tup)
+print(tup[0])
