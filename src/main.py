@@ -107,7 +107,60 @@ else:
 
 
 #  Password checker
-name = input("Enter name: ")
-passwd = input("Enter pass: ")
+# name = input("Enter name: ")
+# passwd = input("Enter pass: ")
 
-print(f"your pass is {len(passwd)}")
+# print(f"your pass is {len(passwd)}")
+
+# List
+li = [1,2,3,"fgfg"]
+li[0] = "dfdf"
+print(li)
+
+# List Slicing
+a_cart = [
+    "note",
+    "sun",
+    "toy",
+    "boy",
+]
+
+print(a_cart[1:3]) # it creates new list
+
+# Matrix
+# the way to discribe 2d
+
+# 2D Array example
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [9,6,3]
+]
+
+print(matrix[2][1])
+
+basket = [1,2,3,4,5]
+print(len(basket))
+
+# Adding
+n_lsit = basket.insert(2,100)
+n_lsit = basket.append(6) # it dosen't produce any value , just it change the value in list
+n_lsit = basket.extend([5,6])
+print(basket)
+print(n_lsit)
+
+# Removing
+basket.pop()
+basket.pop(2) # give value to remove
+basket.remove(2) # give index to remove
+basket.clear()
+
+
+print(basket)
+
+
+# List unpacking
+bas = [1,2,3,4,5]
+a,b,c, *other,d = bas
+
+print(a,b,c, other,d)
