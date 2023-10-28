@@ -169,7 +169,7 @@ print(a,b,c, other,d)
 # Dictionary (unorderred key value pair)
 print(dict)
 # sytntax
-d = { "a":1, "b":2, "c":[1,2,3], "d":"Hello", 123:"xyz", True: "he"} # {key, value}
+d = { "a":1, "b":2, "c":[1,2,3], "d":"Hello", 123:"xyz", True: "he", (1,2):"tuple"} # {key, value}
 print(d)
 print(d['b'])
 print(d['c'])
@@ -188,6 +188,245 @@ print(user)
 
 
 # Tuple like list but it is immutable (Readonly list)
-tup = (1,2,3,4,5)
+tup = (1,2,3,4,5,1)
+a,b,c, *other = (1,2,3,4,5)
 print(tup)
 print(tup[0])
+n_tup = tup[1:2]
+print(n_tup)
+print(a,b,c,other)
+print(tup.count(1))
+print(tup.index(5))
+
+# Sets unordered collection of unique object 
+my_set = {1,2,3,4,5,5}
+print(my_set) # there is no duplicates allowed
+
+# Remove duplicates
+m_list = [1,2,1,2]
+res = set(m_list)
+print(res)
+m_list = list(res)
+print(m_list)
+
+
+# Flow control
+is_old = False
+is_li = True
+
+if is_old:
+    print("Your are old")
+
+print("che")
+
+# Ternary
+can = "msg" if is_old else "not"
+
+print(can)
+
+# Short Circuting
+is_frd = True
+is_u = False
+
+print(is_frd or is_u)
+
+
+# is vs
+print(True is True) # True
+print([] is []) # Flase because different mem
+
+
+# Loops
+for item in "Zoo":
+    print(item)
+
+for item in (1,2,3):
+    print(item)
+
+for it in ["a", "b", "c"]:
+    print(it)
+
+for it in {1,2,3,4,5}:
+    print(it)
+
+# Iterratable - list, dict, tuple, set. string
+#  Iterate -> one by one check in each collection
+for it in {"a":1,"b":[0,1,2]}.items():
+    key, value = it
+    print(it)
+
+for key, value in {"a":1,"b":[0,1,2]}.items():
+    print(key, value)
+
+for it in {"a":1,"b":[0,1,2]}.values():
+    print(it)
+for it in {"a":1,"b":[0,1,2]}.keys():
+    print(it)
+
+
+
+# Range
+print(range(100))
+print(range(0,50))
+print(list(range(100)))
+
+
+for num in range(0,10):
+    print(num)
+
+for _ in range(0,10,2):
+    print(_)
+
+for _ in range(10,0,-1):
+    print(_)
+
+
+
+# Enumerate
+for idx, char in enumerate("Hello"):
+    print(idx,char)
+for idx, char in enumerate([45,55]):
+    print(idx,char)
+
+# While
+i=0
+while i < 50:
+    i += 1
+    print(i)
+    print("Brek")
+    break
+else: # else execute only without brek inside while
+    print("Done")
+
+
+for num in [1,2,3]:
+    continue
+    print(num)
+
+for num in [1,2,3]:
+    pass
+    print(num)
+
+
+
+# excercise
+pic =[
+    [0,0,0,1,0,0,0],
+    [0,0,1,1,1,0,0],
+    [0,1,1,1,1,1,0],
+    [0,0,0,1,0,0,0],
+    [0,0,0,1,0,0,0],
+]
+
+
+for row in pic:
+    for px in row:
+        if px == 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print("")
+
+
+# Functions
+
+def fun_name():
+    print("Hello")
+
+
+fun_name()
+
+#  Parameters
+def disp(val, val2):
+    print(f"Hello {val}")
+
+
+# Args
+disp("val", "ddffd")
+
+# Default Params
+def disp(val="defalut", val2=2):
+    print(f"Hello {val}")
+
+
+# keyword Args
+disp(val2="Hello")
+
+# Methods vs Functions
+list() # function
+print() # function
+
+
+
+"hello".capitalize()  # capitalize()  is a Method
+
+
+
+# args vs kwargs
+
+def a_func(*args, **kwargs):
+    print(*args)
+    print(args)
+    print(kwargs)
+    return sum(args)
+
+
+a_func(1,2,3,4, num1=5)
+
+# Rule : params , *args, default params, **kwargs
+# def fn(name, *args, age=10, **kwargs):
+
+
+# Walurus operator  => :=
+
+a = "Helloooooooooooo"
+if len(a) > 10:
+    print(f"too long {len(a)} elements")
+
+a = "Helloooooooooooo"
+if (n := len(a)) > 10:
+    print(f"too long {n} elements")
+
+# Scope
+# Global scope
+# function scope
+
+if True:
+    x=10
+
+def b_func():
+    total =100
+    print(x)
+
+# print(total) # not scoped
+b_func()
+
+# Scope rule
+
+a=1
+def confuse():
+    # it has its own spcase with new a
+    a=5
+    return a
+
+print(a)
+print(confuse())
+print(a)
+
+# Strat with local?
+# Parent local?
+# Global?
+# Built in Python
+
+
+# Global keyword
+b=10
+def confuse():
+    global b 
+    b +=5
+    return b
+
+
+print(confuse())
+
+# nonlocal
