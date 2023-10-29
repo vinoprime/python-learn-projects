@@ -24,8 +24,19 @@ exam_scores = np.array([25, 45, 60, 70, 80, 85, 88, 92, 95, 97])
 mean_hours = np.mean(hours_studied)
 mean_scores = np.mean(exam_scores)
 
+
+#### Formula-1 theata1 = sumation(∑) of i=1 to n (xi-x^)(yi-y^)/ sumation(∑) of i=1 to n (xi-x^)^2
+# theata1 => represents the slope of the regression line.
+# xi and yi => represents are individual data points in your dataset.
+# x^ and y^ => the mean (average) of the x-values and y-values, respectively.
+# The summation symbol (∑) indicates that you should perform the calculations for each data point and then sum them up.
+#### Formula-2 theata0 = y^ - theata1 * x^
+# theata0 => represents the y-intercept of the regression line.
+#  y^ and x^ => are the means of the x-values and y-values.
+
+
+
 # Calculate the slope (theta1) and y-intercept (theta0) of the regression line
-# formula y = sumation of i=1 to n (xi-x^)(yi-y^)/ sumation of i=1 to n (xi-x^)^2
 numerator = np.sum((hours_studied - mean_hours) * (exam_scores - mean_scores))
 denominator = np.sum((hours_studied - mean_hours) ** 2)
 theta1 = numerator / denominator
