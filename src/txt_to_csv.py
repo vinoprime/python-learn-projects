@@ -1,7 +1,7 @@
 import csv
 
 # Define input and output file paths
-input_file = 'data.txt'
+input_file = './src/data/data.txt'
 output_file = 'output.csv'
 
 # Open the input text file for reading
@@ -15,11 +15,13 @@ with open(output_file, 'w', newline='') as csv_file:
 
     # Write the header (assuming the header is the first line in the text file)
     header = lines[0].strip().split(',')
+    # header = lines[0].strip().split(' ')
     csv_writer.writerow(header)
 
     # Write the data (skipping the first line, which is the header)
     for line in lines[1:]:
         data = line.strip().split(',')
+        # data = line.strip().split(' ')
         csv_writer.writerow(data)
 
 print(f'Conversion complete. CSV file saved as {output_file}')
