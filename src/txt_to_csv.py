@@ -1,7 +1,7 @@
 import csv
 
 # Define input and output file paths
-input_file = 'data_0.txt'
+input_file = 'data.txt'
 output_file = 'output.csv'
 
 # Open the input text file for reading
