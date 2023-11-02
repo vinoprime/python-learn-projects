@@ -6,6 +6,7 @@ $ python -m venv venv
 
 # activate the environment
 $ /venv/Scripts/activate
+$ .\venv\Scripts\activate
 
 # Check pip
 $ pip list
