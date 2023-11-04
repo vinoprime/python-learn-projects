@@ -20,7 +20,7 @@ $ pip install -r .\requirements.txt
 $ pip freeze > requirements.txt
 
 
-# If this repocitory helps you please give a start
+# If this repocitory helps you please give a star
 
 # Bellow packages needed for jypyter notebook to run in vscode
 asttokens==2.4.1
