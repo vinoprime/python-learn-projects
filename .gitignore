@@ -161,3 +161,10 @@ cython_debug/
 
 
 /reference/*
+
+
+*.json
+*.env
+
+
+*.ipynb_checkpoints
