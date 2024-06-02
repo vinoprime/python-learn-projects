@@ -8,7 +8,7 @@ $ python -m venv myenv
 $ /venv/Scripts/activate # for windows
 $ .\venv\Scripts\activate # for windows
 
-$ source <replace with ur env name eg: myenv>/bin/activate # for Debian distro
+$ source myenv/bin/activate # for Debian distro
 # for deactivate
 $ deactivate # for Debian distro
 
