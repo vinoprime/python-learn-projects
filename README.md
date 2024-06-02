@@ -2,11 +2,13 @@
 
 
 # Create virtual env
-$ python -m venv venv 
+$ python -m venv <replace your env name eg: myenv> 
 
 # activate the environment
-$ /venv/Scripts/activate
-$ .\venv\Scripts\activate
+$ /venv/Scripts/activate # for windows
+$ .\venv\Scripts\activate # for windows
+
+$ source <replace with ur env name eg: myenv>/bin/activate # for Debian distro
 
 # Check pip
 $ pip list
