@@ -2,7 +2,7 @@
 
 
 # Create virtual env
-$ python -m venv <replace your env name eg: myenv> 
+$ python -m venv myenv
 
 # activate the environment
 $ /venv/Scripts/activate # for windows
